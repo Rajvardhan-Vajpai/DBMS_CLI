@@ -59,6 +59,9 @@ def transfer_money(sender_id, receiver_phone, amount):
 def show_mini_statement(user_id):
     rows = db.show_mini_statement(user_id)
     print(f"\n{BOLD}RECENT TRANSACTIONS{RE}")
+    if not rows:
+        print(f"{Y}No transactions available yet.{RE}")
+        return
     print(Y + "┌" + "─"*20 + "┬" + "─"*15 + "┬" + "─"*12 + "┐" + RE)
     print(f"│ {'DATE':<18} │ {'TYPE':<13} │ {'AMOUNT':>10} │")
     print(Y + "├" + "─"*20 + "┼" + "─"*15 + "┼" + "─"*12 + "┤" + RE)
