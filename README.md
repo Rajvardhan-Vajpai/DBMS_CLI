@@ -1,35 +1,55 @@
-# Wallet DBMS
+# 💰 Wallet DBMS CLI
 
-This project implements a simple wallet DBMS CLI using SQLite for local development.
+A command-line wallet management system built with Python and SQLite.
+Features secure PIN authentication using bcrypt hashing.
 
-Security:
-- Do not commit the local database file `dbms.sqlite3`.
-- PINs are stored as bcrypt hashes, not plaintext.
+## ✨ Features
+- Create and manage user wallets via CLI
+- Secure PIN storage using bcrypt hashing (no plaintext!)
+- SQLite local database backend
+- Demo script to test basic flows
+- Interactive terminal interface
 
-Quick start:
+## 🛠 Tech Stack
+![Python](https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white)
+![SQLite](https://img.shields.io/badge/-SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
 
-1. Install dependencies:
+## 🚀 Quick Start
 
+1. Clone the repo:
+```bash
+git clone https://github.com/Rajvardhan-Vajpai/DBMS_CLI.git
+cd DBMS_CLI
+```
+
+2. Install dependencies:
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Run the interactive wallet app:
-
+3. Run the interactive wallet app:
 ```bash
 python frontend.py
 ```
 
-3. Or run the demo script to create test users and exercise basic flows:
-
+4. Or run the demo script:
 ```bash
 python demo_run.py
 ```
 
-Push to GitHub safely:
+## 🔐 Security
+- PINs are stored as bcrypt hashes, never plaintext
+- Local database file `dbms.sqlite3` is gitignored
 
-```bash
-git add .gitignore README.md requirements.txt frontend.py app_sqlite.py demo_run.py
-git commit -m "Secure wallet app: hash PINs, ignore local secrets, use SQLite backend"
-git push origin main
-```
+## 📁 Project Structure
+
+| File | Description |
+|------|-------------|
+| `frontend.py` | Interactive CLI interface |
+| `app_sqlite.py` | SQLite database logic |
+| `demo_run.py` | Demo script with test users |
+| `requirements.txt` | Dependencies |
+| `.gitignore` | Git ignore rules |
+
+## 👨‍💻 Author
+**Rajvardhan Vajpai** — [GitHub](https://github.com/Rajvardhan-Vajpai)
